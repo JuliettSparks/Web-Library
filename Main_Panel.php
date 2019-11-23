@@ -35,6 +35,9 @@
     <form action="Conductor.php" method="post">
     <input type="submit" name="consulta1" value="Consulta de Todos los Libros">
     <input type="submit" name="consulta2" value="Consultar Libros por Autor">
+    <input type="submit" name="consulta3" value="Consultar Libros por Nombre">
+    <input type="submit" name="consulta4" value="Consultar Libros por Asignatura">
+    <input type="submit" name="prestar1" value="Solicitar Préstamo de un Libro">
         <?php
             
             if($Le_Info['puesto']=="Admin" || $Le_Info['puesto']=="Personal"){?>

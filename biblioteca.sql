@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-11-2019 a las 06:45:24
+-- Tiempo de generación: 23-11-2019 a las 09:30:30
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.3.9
 
@@ -43,6 +43,7 @@ INSERT INTO `asignatura` (`nombre`, `prefijo`) VALUES
 ('Biologia', 'BI'),
 ('Calculo Diferencial', 'CD'),
 ('Espanol', 'ES'),
+('Football', 'FO'),
 ('Frances', 'FR'),
 ('Geometria', 'GM'),
 ('Historia', 'HT'),
@@ -77,13 +78,17 @@ INSERT INTO `libros` (`id`, `nombre`, `autor`, `asignatura`, `existencia_t`, `ex
 ('AL100.2', 'Der Deutsche und du', 'Victor Encina', 'Aleman', 6, 4, 2, 'Paracetamol INC', 2004, 'Alemania', 2),
 ('AN100.7', 'El Cerebro', 'Victor Encina', 'Anatomia', 23, 5, 18, 'Paracetamol INC', 2007, 'Mexico', 7),
 ('AN101.1', 'Los Nervios', 'Pablo Moncivaiz', 'Anatomia', 24, 4, 20, 'Guatimoc', 2020, 'Mexico', 1),
+('AN102.2', 'Los Pulmones', 'Victor Encina', 'Anatomia', 5, 4, 1, 'Paracetamol INC', 2017, 'Croacia', 2),
+('BI100.7', 'El Bisho', 'Carla Gonzalez', 'Biologia', 9, 5, 4, 'Starbacks', 2008, 'Lituania', 7),
 ('CD100.20', 'Derivadas y tu', 'Gabriela Roman Loera', 'Calculo Diferencial', 7, 5, 2, 'UAA', 2005, 'Eslovaquia', 20),
 ('ES100.2', 'La Voz 101', 'Victor Ugarte', 'Espanol', 6, 4, 2, 'Filio Corp', 2015, 'Mexico', 2),
 ('ES101.1', 'Poemas Absurdos', 'Pablo Gutierrez', 'Espanol', 0, 0, 0, 'UAA', 2002, 'Mexico', 1),
+('FO100.2', 'El Bisho', 'Victor Esparza', 'Football', 3, 2, 1, 'Starbacks', 2015, 'Portugal', 2),
 ('FR100.7', 'Le Baguette', 'El Berns', 'Frances', 5, 5, 0, 'France Corp', 1998, 'Francia', 7),
 ('FR101.3', 'Parle Vous', 'Pierre LePan', 'Frances', 7, 6, 1, 'France Corp', 2017, 'Inglaterra', 3),
 ('GM100.2', 'Parabolas y Tu', 'Gabriela Roman Loera', 'Geometria', 6, 4, 2, 'UAA', 2015, 'Mexico', 2),
-('ME100.4', 'Jeep 202', 'Javier Nagore', 'Mecanica', 9, 4, 5, 'Starbacks', 2015, 'Estados Unidos', 4);
+('ME100.4', 'Jeep 202', 'Javier Nagore', 'Mecanica', 9, 4, 5, 'Starbacks', 2015, 'Estados Unidos', 4),
+('ME101.1', 'Autos para Noobies', 'Javier Nagore', 'Mecanica', 1, 1, 0, 'Starbacks', 2010, 'Luxemburgo', 1);
 
 -- --------------------------------------------------------
 

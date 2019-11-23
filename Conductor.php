@@ -28,4 +28,13 @@
         header("location: index.html");
         die();
     }
+    if($_POST['consulta3']){
+        header("location: CheckName.html");
+    }
+    if($_POST['consulta4']){
+        header("location: CheckBySubject.html");
+    }
+    if($_POST['prestar1']){
+        header("location: Prestamo.php");
+    }
 ?>

@@ -59,7 +59,7 @@
         <input type="number" name="ano" placeholder="Año de Publicación">
         <input type="number" name="volumen" placeholder="Volumen del Libro">
         <input type="submit" value="Dar de Alta el Libro">
-        <a href="Main_Panel.php">Cierra la Sesión</a>
+        <a href="Main_Panel.php">Regresa al Menú Principal</a>
     </form>
 </body>
 </html>

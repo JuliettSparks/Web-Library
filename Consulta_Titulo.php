@@ -1,31 +1,30 @@
 <?php
-    session_start();
-    if($_SESSION['id']==null){
-        header("location: NotDataLogin.html");
-        die();
-     }
-    $user=$_SESSION['id'];
+        session_start();
+        if($_SESSION['id']==null){
+            header("location: NotDataLogin.html");
+            die();
+         }
+         $servidor="localhost";
+         $usuario="root";
+         $contrasena="";
+         $db="biblioteca";
+     
+         $conexion=mysqli_connect($servidor,$usuario,$contrasena,$db);
 
-    $servidor="localhost";
-    $usuario="root";
-    $contrasena="";
-    $db="biblioteca";
+         $titulo=$_POST['titulo'];
 
-    $conexion=mysqli_connect($servidor,$usuario,$contrasena,$db);
+         $query="SELECT * from libros WHERE nombre like '$titulo%'";
 
-    $autor=$_POST['autor'];
+         $query2="SELECT * from libros WHERE nombre like '$titulo%'";
 
-    $query="SELECT * from libros WHERE autor like '$autor%'";
+         $answer=mysqli_query($conexion,$query);
 
-    $answer=mysqli_query($conexion,$query);
+         $data=mysqli_fetch_array($answer);
+     
+         $answer2=mysqli_query($conexion,$query2);
+     
+         $iterator=1;
 
-    $data=mysqli_fetch_array($answer);
-
-    $query2="SELECT * from libros WHERE autor LIKE '$autor%'";
-
-    $answer2=mysqli_query($conexion,$query2);
-
-    $iterator=1;
 ?>
 <!DOCTYPE html>
 <html lang="es-mx" xmlns="http://www.w3.org/1999/xhtml">
@@ -35,8 +34,8 @@
 </head> 
 <body>
     <form action="Main_Panel.php" method="post">
-    <?php if($data['id']=="" || $autor==""){?>
-        <h2>No se encontró algún libro de ese Autor</h2>
+    <?php if($data['id']=="" || $titulo==""){?>
+        <h2>No se encontró algún libro con ese Nombre</h2>
         <input type="submit" value="Regresar" />
     <?php          
     }else{?>
