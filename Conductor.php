@@ -37,4 +37,10 @@
     if($_POST['prestar1']){
         header("location: Prestamo.php");
     }
+    if($_POST['prestar2']){
+        header("location: ShowAllLoans.php");
+    }
+    if($_POST['prestar3']){
+        header("location: ShowMyLoans.php");
+    }
 ?>

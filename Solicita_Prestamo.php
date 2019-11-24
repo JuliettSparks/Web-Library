@@ -10,7 +10,7 @@
      $db="biblioteca";
 
      $conexion=mysqli_connect($servidor,$usuario,$contrasena,$db);
-
+    
      $titulo=$_POST['titulo'];
      $autor=$_POST['autor'];
      $asignatura=$_POST['asignatura'];
@@ -47,12 +47,12 @@
     <form action="Main_Panel.php" method="post">
         <h2>No se encontraron libros bajo los datos Solicitados</h2>
         <input type="submit" value="Regresar al Menú Principal">
+        
     </form>
 </body>
 </html>
     <?php  
-     }$answer=mysqli_query($conexion,$query);
-     ?>
+     }else{$answer=mysqli_query($conexion,$query);?>
      <!DOCTYPE html>
 
 <html lang="es-mx" xmlns="http://www.w3.org/1999/xhtml">
@@ -82,7 +82,7 @@
             ?>
                 <tr>
                 <td><?php echo $iterator?></td>
-                <?php $iterator++;?>
+                
                 <td><?php echo $datas['id']?></td>
                 <td><?php echo $datas['nombre']?></td>
                 <td><?php echo $datas['autor']?></td>
@@ -94,7 +94,7 @@
                 <td><?php echo $datas['ano']?></td>
                 <td><?php echo $datas['ubicacion']?></td>
                 <td><?php echo $datas['volumen']?></td>
-
+                <?php $iterator++;?>
             <?php
                 }
             ?> 
@@ -111,5 +111,7 @@
     <input type="submit" value="Solicitar" />
     <a href="Main_Panel.php">Regresa al Menú Principal</a>
     </form>
+    <?php
+     }?>
 </body>
 </html>

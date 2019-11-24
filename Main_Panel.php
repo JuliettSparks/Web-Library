@@ -37,17 +37,18 @@
     <input type="submit" name="consulta2" value="Consultar Libros por Autor">
     <input type="submit" name="consulta3" value="Consultar Libros por Nombre">
     <input type="submit" name="consulta4" value="Consultar Libros por Asignatura">
-    <input type="submit" name="prestar1" value="Solicitar Préstamo de un Libro">
         <?php
             
             if($Le_Info['puesto']=="Admin" || $Le_Info['puesto']=="Personal"){?>
                 <input type="submit" name="alta1" value="Dar de Alta Libros" />
                 <input type="submit" name="alta2" value="Alta Nuevo Usuario"/>
                 <input type="submit" name="alta3" value="Dar de Alta Asignaturas"/>
+                <input type="submit" name="prestar2" value="Mostrar todos los Préstamos">
                  <?php //Preguntar si las Asignaturas de los Libros serán fijas o no 
             }else{
                 ?>
-                    
+                    <input type="submit" name="prestar1" value="Solicitar Préstamo de un Libro">
+                    <input type="submit" name="prestar3" value="Revisar sus Préstamos Actuales">
                     <?php
             }
                 ?>
