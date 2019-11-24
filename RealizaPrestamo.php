@@ -33,6 +33,7 @@ $ahoraLegible = date("Y-m-d", $ahora);
 echo "Hoy es $ahoraLegible y mañana es $mananaLegible";
 $manana = strtotime("+1 day", $ahora);*/
         $now=time();
+        //$later=strtotime("+4 day",$now);
         $later=strtotime("+4 day",$now);
         $date=date("Y-m-d H:i:s",$now);
         $plazo=date("Y-m-d H:i:s",$later);
