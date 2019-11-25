@@ -1,0 +1,75 @@
+﻿body
+{
+    margin:0;
+    padding:0;
+    background:url(../Styles/Images/fondo.jpg) no-repeat center top;
+    font-family:'Agency FB';
+    background-size:cover;
+    height:100vh;
+}
+.Login_Box{
+    width:320px;
+    height:420px;
+    background:#000000;
+    color:aliceblue;
+    top:50%;
+    left:50%;
+    position:absolute;
+    transform:translate(-50%, -50%);
+    box-sizing:border-box;
+    padding:70px 30px;
+
+}
+.Login_Box .logo{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    position:absolute;
+    top:-50px;
+    left: calc(50% - 50px);
+}
+.Login_Box h1 {
+        margin: 0;
+        padding: 0 0 20px;
+        text-align: center;
+        font-size: 22px;
+}
+.Login_Box label {
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        display: block;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Login_Box input{
+    width:100%;
+    margin-bottom:20px;
+
+}
+.Login_Box input[type="text"], input[type="password"]{
+    border:none;
+    border-bottom:1px solid aliceblue;
+    background:transparent;
+    outline:none;
+    height:40px;
+    color:aliceblue;
+    font-size: 20px;
+}
+.Login_Box input[type="submit"]{
+    border:none;
+    outline:none;
+    height:40px;
+    background-color:darkred;
+    color:aliceblue;
+    border-radius:20px;
+}
+.Login_Box a {
+        text-decoration: none;
+        font-size: 22px;
+        line-height: 20px;
+        color:darkgrey;
+}
+.Login_Box a:hover{
+    color:yellow;
+}
+
