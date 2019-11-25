@@ -63,6 +63,10 @@
     color:aliceblue;
     border-radius:20px;
 }
+.Login_Box input[type="submit"]:hover{
+    cursor:pointer;
+}
+
 .Login_Box a {
         text-decoration: none;
         font-size: 22px;
