@@ -45,6 +45,7 @@
                 <input type="submit" name="alta2" value="Alta Nuevo Usuario"/>
                 <input type="submit" name="alta3" value="Dar de Alta Asignaturas"/>
                 <input type="submit" name="prestar2" value="Mostrar todos los Préstamos">
+                <input type="submit" name="donar1" value="Donar libros">
                  <?php 
             }else{
                 ?>
@@ -76,6 +77,7 @@
         
         while($data=mysqli_fetch_array($answer)){
             $SecondDate=strtotime($data['fecha_prestado']);
+            $id_Data=$data['id'];
             $date3=$data['fecha_prestado'];
             $diaA = date("d", $FechaInt);
             $dia = date("d", $SecondDate);
@@ -124,7 +126,9 @@
                         $date3=$data['fecha_prestado'];
                         //$SecondDate=date("Y-m-d H:i:s");
                         $query3="UPDATE prestamos SET dias_restantes= $diasA WHERE fecha_prestado='$date3'";
+                        $query4="UPDATE prestamos SET fecha_prestado= $date3 WHERE id='$id_Data'";
                         mysqli_query($conexion,$query3);
+                        mysqli_query($conexion,$query4);
                     }
             //break;
                 // $query2="UPDATE libros SET existencia_p = $newP WHERE id='$libro'";
