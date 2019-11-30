@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-11-2019 a las 23:59:38
+-- Tiempo de generación: 30-11-2019 a las 10:04:50
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.3.9
 
@@ -80,7 +80,7 @@ INSERT INTO `libros` (`id`, `nombre`, `autor`, `asignatura`, `existencia_t`, `ex
 ('AN100.7', 'El Cerebro', 'Victor Encina', 'Anatomia', 22, 3, 19, 'Paracetamol INC', 2007, 'Mexico', 7),
 ('AN101.1', 'Los Nervios', 'Pablo Moncivaiz', 'Anatomia', 24, 2, 22, 'Guatimoc', 2020, 'Mexico', 1),
 ('AN102.2', 'Los Pulmones', 'Victor Encina', 'Anatomia', 5, 4, 1, 'Paracetamol INC', 2017, 'Croacia', 2),
-('BI100.7', 'El Bisho', 'Carla Gonzalez', 'Biologia', 9, 1, 8, 'Starbacks', 2008, 'Lituania', 7),
+('BI100.7', 'El Bisho', 'Carla Gonzalez', 'Biologia', 9, 0, 9, 'Starbacks', 2008, 'Lituania', 7),
 ('CD100.20', 'Derivadas y tu', 'Gabriela Roman Loera', 'Calculo Diferencial', 7, 1, 6, 'UAA', 2005, 'Eslovaquia', 20),
 ('CD101.7', 'Limites', 'Enrique Luna', 'Calculo Diferencial', 7, 4, 3, 'Paps Corp', 2017, 'Espana', 7),
 ('ES100.2', 'La Voz 101', 'Victor Ugarte', 'Espanol', 6, 4, 2, 'Filio Corp', 2015, 'Mexico', 2),
@@ -89,7 +89,7 @@ INSERT INTO `libros` (`id`, `nombre`, `autor`, `asignatura`, `existencia_t`, `ex
 ('FR100.7', 'Le Baguette', 'El Berns', 'Frances', 5, 3, 2, 'France Corp', 1998, 'Francia', 7),
 ('FR101.3', 'Parle Vous', 'Pierre LePan', 'Frances', 7, 4, 3, 'France Corp', 2017, 'Inglaterra', 3),
 ('GM100.2', 'Parabolas y Tu', 'Gabriela Roman Loera', 'Geometria', 6, 2, 4, 'UAA', 2015, 'Mexico', 2),
-('ME100.4', 'Jeep 202', 'Javier Nagore', 'Mecanica', 9, 4, 5, 'Starbacks', 2015, 'Estados Unidos', 4),
+('ME100.4', 'Jeep 202', 'Javier Nagore', 'Mecanica', 8, 3, 5, 'Starbacks', 2015, 'Estados Unidos', 4),
 ('ME101.1', 'Autos para Noobies', 'Javier Nagore', 'Mecanica', 1, 0, 1, 'Starbacks', 2010, 'Luxemburgo', 1),
 ('QM100.7', 'Mil y un maneras de fermentar', 'Laurangas Patas Guangas', 'Quimica', 7, 6, 1, 'Favela', 2008, 'Alemania', 7);
 
@@ -100,11 +100,20 @@ INSERT INTO `libros` (`id`, `nombre`, `autor`, `asignatura`, `existencia_t`, `ex
 --
 
 CREATE TABLE `multas` (
-  `id` int(11) NOT NULL,
   `id_Prestamo_Causante` int(11) NOT NULL,
+  `id_Persona` int(11) NOT NULL,
   `dias_multa` int(11) NOT NULL,
+  `days_pre_obli_repo` int(11) NOT NULL,
   `multa` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_latvian_ci;
+
+--
+-- Volcado de datos para la tabla `multas`
+--
+
+INSERT INTO `multas` (`id_Prestamo_Causante`, `id_Persona`, `dias_multa`, `days_pre_obli_repo`, `multa`) VALUES
+(85654, 175287, 1, 4, 30),
+(91315, 175287, 1, 4, 30);
 
 -- --------------------------------------------------------
 
@@ -126,7 +135,6 @@ CREATE TABLE `personas` (
 --
 
 INSERT INTO `personas` (`id`, `nombre`, `apellido_pat`, `apellido_mat`, `puesto`, `pass`) VALUES
-(11111, 'Claire', 'Jones', 'Jones', 'Estudiante', 'a'),
 (111111, 'Frida', 'Esparza', 'Navarro', 'Admin', 'root'),
 (145839, 'Lucas', 'Garcia', 'Salas', 'Estudiante', '1q2w3e4r5t6y'),
 (147896, 'Ivan', 'Shavez', 'Wilo', 'Estudiante', '1q2w3e4r5t6y'),
@@ -154,10 +162,9 @@ CREATE TABLE `prestamos` (
 --
 
 INSERT INTO `prestamos` (`id`, `id_Persona`, `id_Prestado`, `fecha_prestado`, `fecha_fin`, `dias_restantes`, `status_libro`) VALUES
-(5920, 189454, 'CD100.20', '2019-11-25 20:45:34', '2019-11-28 02:58:05', 2, 'Seguro'),
-(85576, 147896, 'QM100.7', '2019-11-25 20:58:25', '2019-11-29 14:58:25', 2, 'Seguro'),
-(85654, 175287, 'CD101.7', '2019-11-25 04:09:44', '2019-11-28 02:49:07', 2, 'Seguro'),
-(91315, 175287, 'AL100.2', '2019-11-25 04:09:44', '2019-11-28 01:57:29', 2, 'Seguro');
+(75943, 147896, 'BI100.7', '2019-11-30 07:53:56', '2019-12-04 01:53:56', 4, 'Seguro'),
+(85654, 175287, 'CD101.7', '2019-11-25 04:09:44', '2019-11-28 02:49:07', 0, 'Seguro'),
+(91315, 175287, 'AL100.2', '2019-11-25 04:09:44', '2019-11-28 01:57:29', 0, 'Seguro');
 
 --
 -- Índices para tablas volcadas

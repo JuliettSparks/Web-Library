@@ -65,6 +65,7 @@
 }
 .Login_Box input[type="submit"]:hover{
     cursor:pointer;
+    color: navy;
 }
 
 .Login_Box a {
@@ -75,5 +76,11 @@
 }
 .Login_Box a:hover{
     color:yellow;
+}
+.Login_Box input[type="text"],input[type="password"]:invalid{
+    border: 1px solid red;
+}
+.Login_Box input[type="text"],input[type="password"]:valid{
+    border: 1px solid green;
 }
 

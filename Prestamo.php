@@ -35,8 +35,8 @@
 </head>
 <body>
     <form action="Solicita_Prestamo.php" method="post">
-        <input type="text" name="titulo" placeholder="titulo" />
-        <input type="text" name="autor" placeholder="autor" />
+        <input type="text" name="titulo" placeholder="Título" />
+        <input type="text" name="autor" placeholder="Autor" />
         <select name=asignatura>
             
             <option>Asignatura</option>
