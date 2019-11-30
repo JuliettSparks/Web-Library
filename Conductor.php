@@ -46,4 +46,10 @@
     if($_POST['donar1']){
         header("location: Donar.php");
     }
+    if($_POST['multas1']){
+        header("location: ShowMyPenaltys.php");
+    }
+    if($_POST['multas2']){
+        header("location: ShowAllPenaltys.php");
+    }
 ?>

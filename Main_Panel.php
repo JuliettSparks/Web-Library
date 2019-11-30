@@ -46,11 +46,13 @@
                 <input type="submit" name="alta3" value="Dar de Alta Asignaturas"/>
                 <input type="submit" name="prestar2" value="Mostrar todos los Préstamos">
                 <input type="submit" name="donar1" value="Donar libros">
+                <input type="submit" name="multas2" value="Revisar todas las Multas">
                  <?php 
             }else{
                 ?>
                     <input type="submit" name="prestar1" value="Solicitar Préstamo de un Libro">
                     <input type="submit" name="prestar3" value="Revisar sus Préstamos Actuales">
+                    <input type="submit" name="multas1" value="Revisar sus Multas">
                     <?php
             }
                 ?>
