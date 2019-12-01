@@ -58,7 +58,8 @@ $manana = strtotime("+1 day", $ahora);*/
             $query3="UPDATE libros SET existencia_a = $newA WHERE id='$libro'";
             mysqli_query($conexion,$query3);
             //mysqli_query($conexion,$query2);
-            $query4="INSERT INTO prestamos(id,id_Persona,id_Prestado,fecha_prestado,fecha_fin,dias_restantes,status_libro) VALUES ($LeId,'$user','$libro','$date','$plazo','4','Seguro')";
+            $Palabra="Seguro";
+            $query4="INSERT INTO prestamos(id,id_Persona,id_Prestado,fecha_prestado,fecha_fin,dias_restantes,status_libro) VALUES ($LeId,'$user','$libro','$date','$plazo','4','1')";
             mysqli_query($conexion,$query4);
             header("location: PrestamoExitoso.html");
         }

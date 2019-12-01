@@ -31,67 +31,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Biblioteca</title>
-    <link href="css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="Styles/MainPanelStylesPart2.css" />
     </head>
     <body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="#"><?php echo $Le_Message?></a>
-			
-			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> 
-				  <span class="navbar-toggler-icon"></span> 
-			</button>
-			
-			  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-				  
-			    <ul class="navbar-nav ml-auto">
-			      <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
-			      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Consultas </a>
-			        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-						<a class="dropdown-item" href="ConsultaTotal.php">Total</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="CheckName.html">Por Título</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="CheckAutor.html">Por Autor</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="CheckBySubject.html">Por Asignatura</a>
-			          </div>
-		          </li>
-					<?php if($Le_Info['puesto']=="Admin" || $Le_Info['puesto']=="Personal"){?>
-						<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Altas </a>
-			        	<div class="dropdown-menu" aria-labelledby="navbarDropdown1"> 
-						<a class="dropdown-item" href="Add_user.html">Nuevo Usuario</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="BookAdd.php">Nuevo Libro</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="Add_Subject.html">Nueva Asignatura</a>
-			          </div>
-		          </li>
-					<li class="nav-item"> <a class="nav-link" href="ShowAllLoans.php">Mostrar Todos los Préstamos</a> </li>
-					<li class="nav-item"> <a class="nav-link" href="Donar.php">Donar Libros</a> </li>
-					<li class="nav-item"> <a class="nav-link" href="ShowAllPenaltys.php">Revisar todos los Adeudos</a> </li>
-					<li class="nav-item"> <a class="nav-link" href=ShowAllRequests.php>Revisar Solicitudes de Renovación</a> </li>
-					<?php
-					}else{?>
-					<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Mostrar Datos </a>
-			        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-						<a class="dropdown-item" href="ShowMyLoans.php">Mostrar mis Préstamos</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="ShowMyPenaltys.php">Mostrar mis Adeudos</a>
-						</div>
-					</li>
-					<li class="nav-item"> <a class="nav-link" href="Prestamo.php">Solicitar un Préstamo</a> </li>
-					<?php
-					}?>
-				  <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
-				<li class="nav-item"> <a class="nav-link" href="Cerrar_Sesion.php">Cerrar Sesión</a></li>
-		        </ul>
-				  
-				 
-	      </div>
-	  </nav>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap-4.3.1.js"></script>
+    <form action="Conductor.php" method="post">
+        <h1><?php echo $Le_Message ?></h1>
+    <input type="submit" name="consulta1" value="Consulta de Todos los Libros">
+    <input type="submit" name="consulta2" value="Consultar Libros por Autor">
+    <input type="submit" name="consulta3" value="Consultar Libros por Nombre">
+    <input type="submit" name="consulta4" value="Consultar Libros por Asignatura">
+        <?php
+            
+            if($Le_Info['puesto']=="Admin" || $Le_Info['puesto']=="Personal"){?>
+                <input type="submit" name="alta1" value="Dar de Alta Libros" />
+                <input type="submit" name="alta2" value="Alta Nuevo Usuario"/>
+                <input type="submit" name="alta3" value="Dar de Alta Asignaturas"/>
+                <input type="submit" name="prestar2" value="Mostrar todos los Préstamos">
+                <input type="submit" name="donar1" value="Donar libros">
+                <input type="submit" name="multas2" value="Revisar todas las Multas">
+                <input type="submit" name="renovar2" value="Revisar Solicitudes de Renovación">
+                 <?php 
+            }else{
+                ?>
+                    <input type="submit" name="prestar1" value="Solicitar Préstamo de un Libro">
+                    <input type="submit" name="prestar3" value="Revisar sus Préstamos Actuales">
+                    <input type="submit" name="multas1" value="Revisar sus Multas">
+                    <input type="submit" name="renovar1" value="Solicitar Renovación de Préstamos">
+                    <?php
+            }
+                ?>
+                
+                <input type="submit" name="salir" value="Cerrar Sesión">
+    </form> 
     </body>
     </html>
 <?php
@@ -186,7 +156,7 @@
                     //echo $Allow;
                 }
                 if($date>=$plazo && $Allow==true){
-                    $query6="INSERT INTO multas(id_Prestamo_Causante,id_Persona,dias_multa,days_repo,multa) Values ('$idLoan','$idUser','1','4','30')";
+                    $query6="INSERT INTO multas(id_Prestamo_Causante,id_Persona,dias_multa,days_pre_obli_repo,multa) Values ('$idLoan','$idUser','1','4','30')";
                     mysqli_query($conexion,$query6);
                 }
                 if($data3['id_Persona']!=""){
@@ -206,12 +176,10 @@
                                 break;
                     }
                     if($date>=$plazo){
-                        $Palabra='Perdido';
                         $AllowDe=true;
-                        $RepoObligatory=false;
                         $NewDayMu=$data3['dias_multa']+1;
-                        $NewDayRepo=$data3['days_repo']-1;
-                        $NewMulta=$data3['multa']+15;
+                        $NewDayRepo=$date3['days_pre_obli_repo']-1;
+                        $NewMulta=$date3['multa']+15;
                         if($NewDayRepo<=0){
                             $NewDayRepo=0;
                             $RepoObligatory=TRUE;
@@ -220,14 +188,12 @@
                             $NewDayMu=4;
                         }
                         if($RepoObligatory==true){
-                          
                             $NewMulta=400;
-                         
-                            $query11="UPDATE prestamos set status_libro=0 WHERE id = '$id_Data'";
+                            $query11="UPDATE prestamos set status_libro= Perdido WHERE id = '$idLoan'";
                             mysqli_query($conexion,$query11);
                         }
                         $query8="UPDATE multas set dias_multa = $NewDayMu WHERE id_Prestamo_Causante ='$idLoan'";
-                        $query9="UPDATE multas set days_repo = $NewDayRepo WHERE id_Prestamo_Causante ='$idLoan'";
+                        $query9="UPDATE multas set days_pre_obli_repo = $NewDayRepo WHERE id_Prestamo_Causante ='$idLoan'";
                         $query10="UPDATE multas set multa = $NewMulta WHERE id_Prestamo_Causante ='$idLoan'";
                         mysqli_query($conexion,$query8);
                         mysqli_query($conexion,$query9);

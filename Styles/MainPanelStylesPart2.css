@@ -1,0 +1,8 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background: url(../Styles/Images/MainPanelFondo.jpg) no-repeat center top;
+    font-family: Gabriola;
+    background-size: cover;
+    height: 100vh;
+}

@@ -52,4 +52,14 @@
     if($_POST['multas2']){
         header("location: ShowAllPenaltys.php");
     }
+    if($_POST['renovar1']){
+        header("location: Solicita_Renovar.php");
+    }
+    if($_POST['renovar2']){
+        header("location: CheckRenovationRequests.php");
+    }
+    if($_POST['renovar3']){
+        header("location: SendRequest.php");
+    }
+
 ?>

@@ -56,7 +56,7 @@
                         <td><?php echo $data['id_Persona']?></td>
                         <td><?php echo $dataL['id_Prestado']?></td>
                         <td><?php echo $data['dias_multa']?></td>
-                        <td><?php echo $data['days_pre_obli_repo']?> </td>
+                        <td><?php echo $data['days_repo']?> </td>
                         <td><?php echo $data['multa']?></td>
                 </tr>
                <?php }?>
