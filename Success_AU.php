@@ -1,4 +1,4 @@
-﻿<?php
+<?php
          session_start();
          if($_SESSION['id']==null){
             header("location: NotDataLogin.html");
@@ -19,9 +19,13 @@
     <title>Biblioteca</title>
 </head>
 <body>
+    <div class="Cajita" alt="Logo">
+    <link rel="stylesheet" href="Styles/Success_AU_Styles.css" />
+    <img class="logo" src="Styles/Images/EasterEgg.png" />
     <form action="Conductor.php" method="post">
-        <h2>Éxito Al Agregar</h2>
+        <h1>Éxito Al Agregar</h1>
         <input type="submit" name="panel1"value= "Regresar a la Página Principal">
     </form>
+    </div>
 </body>
 </html>
