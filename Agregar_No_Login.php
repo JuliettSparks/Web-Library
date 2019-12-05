@@ -33,6 +33,6 @@ $alta="INSERT INTO personas(id,nombre,apellido_pat,apellido_mat,puesto,pass) VAL
 mysqli_query("SET NAMES 'utf8'");
 mysqli_query($conexion,$alta);
 mysqli_close($conexion);
-header("location: Success_AU_NoLogin.php");
+header("location: Success_AU_No_Login.php");
 }
 ?>

@@ -28,7 +28,7 @@
     <title>Biblioteca</title>
 </head>
 <body>
-    <form action="SendRequest.php" method="post">
+    <form action="Conductor.php" method="post">
     <?php if($data['id']==""){?>
         <h2>No se tienen Registrados Préstamos para este Usuario</h2>
         <input type="submit" name="panel1" value="Regresar">
@@ -67,7 +67,7 @@
 
                  }
             ?>    </select>
-                <input type="submit" value="Enviar Solicitud">
+                <input type="submit" name="renovar1"value="Enviar Solicitud">
                 <a href="Main_Panel.php">Regresar al Menú Principal</a>
                 <?php
                 }?>

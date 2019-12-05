@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
     session_start();
     $var_usuario=$_SESSION['id'];
@@ -14,9 +14,7 @@
     <title>Biblioteca</title>
 </head>
 <body>
-    <form action="NewUserByNoLoginMode.php" method="post">
         <h2>Éxito Al Agregar al Nuevo Alumno</h2>
-        <input type="submit" name="panel1"value= "Regresar a la Página Principal">
-    </form>
+        <a href="index.html">Regresar al Menú Principal</a>
 </body>
 </html>
