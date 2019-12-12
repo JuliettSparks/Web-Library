@@ -25,15 +25,17 @@
 <head>
     <meta charset="utf-8" />
     <title>Biblioteca</title>
+    <link rel="stylesheet" href="Styles/ShowAllPenaltysStyles.css" />
 </head>
 <body>
+    <div class="Cajota">
     <form action="Conductor.php" method="post">
     <?php if($data['id']==""){?>
         <h2>No existe algún libro Prestado</h2>
         <input type="submit" name="panel1" value="Regresar al Menú Principal" />
                 <?php
             }else{ $answer=mysqli_query($conexion,$query); ?>
-                <h2>Se encontraron los Siguientes Préstamos:</h2>
+                <h1>Se encontraron los Siguientes Préstamos:</h1>
                 <table border="1">
                 <tr>
                     <td>ID del Préstamo:</td>
@@ -61,5 +63,6 @@
             }
                 ?>
     </form>
+           </div>
 </body>
 </html>
