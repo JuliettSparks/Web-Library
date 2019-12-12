@@ -25,8 +25,10 @@
 <head>
     <meta charset="utf-8" />
     <title>Biblioteca</title>
+    <link rel="stylesheet" href="Styles/ShowAllPenaltysStyles.css" />
 </head>
 <body>
+    <div class="Cajota">
     <form action="Conductor.php" method="post">
     <?php if($data['id_Persona']==""){?>
         <h2>No se tienen Multas de ningún usuario</h2>
@@ -65,5 +67,6 @@
             }
                 ?>
     </form>
+         </div>
 </body>
 </html>
