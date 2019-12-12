@@ -68,6 +68,7 @@
 		          </li>
 					<li class="nav-item"> <a class="nav-link" href="ShowAllLoans.php">Mostrar Todos los Préstamos</a> </li>
 					<li class="nav-item"> <a class="nav-link" href="Donar.php">Donar Libros</a> </li>
+					<li class="nav-item"> <a class="nav-link" href="Reposition_By_Worker.php">Añadir/Reponer Ejemplares</a></li>
 					<li class="nav-item"> <a class="nav-link" href="ShowAllPenaltys.php">Revisar todos los Adeudos</a> </li>
 					<li class="nav-item"> <a class="nav-link" href=ShowAllRequests.php>Revisar Solicitudes de Renovación</a> </li>
 					<?php
