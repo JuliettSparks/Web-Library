@@ -1,0 +1,59 @@
+﻿body {
+    background: url(../Styles/Images/ListThings.png) no-repeat center top;
+    font-family: Calibri;
+}
+.Cajota {
+    width: 600px;
+    top: 20%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 20%;
+    display:inline-block;
+    text-align:center;
+    margin:150px auto;
+}
+h1{
+    font-size:14px;
+    text-align:center;
+}
+.Cajota table{
+   font-family: Pristina;
+   text-align:left;
+   background-color:aliceblue;
+   position: absolute;
+   top: 70%;
+   margin-top: -300px;
+   border-collapse:collapse;
+   text-align:center;
+}
+.Cajota td{
+    border: 1px solid black;
+}
+.Cajota tr:nth-child(even){
+    background-color:forestgreen;
+}
+.Cajota tr:hover{
+    cursor: pointer;
+    background-color: darkred;
+    color: wheat;
+}
+.Cajota input {
+    border:none;
+    outline:none;
+    width:50%;
+    height:40px;
+    background-color:darkred;
+    color:aliceblue;
+    border-radius:20px;
+    margin-right:auto;
+    border: aliceblue 5px dotted;
+}
+.Cajota input[type="submit"]:hover {
+    cursor: pointer;
+    color: navy;
+    border: PowderBlue 5px dashed;
+    background-color: gold;
+}
