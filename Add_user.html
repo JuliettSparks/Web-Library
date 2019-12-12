@@ -13,19 +13,27 @@
     <div class="Cajita" alt="Logo">
         <img class="logo" src="Styles/Images/EasterEgg.png" />
         <form action="Agregar.php" method="post">
-        <h2>Alta de Usuario</h2>
-        <input type="number" id="LeID" name="id" placeholder="ID" minlength="6" maxlength="6" /><br />
+        <h1>Alta de Usuario</h1>
+        <label>ID:</label>
+        <input type="number" id="LeID" name="id" placeholder="ID" minlength="6" maxlength="6" ><br />
+        <label>Nombre:</label>
         <input type="text" name="nombre" placeholder="Nombre" /><br />
+        <label for="appp">Apellido Paterno:</label>
         <input type="text" name="apellido_pat" placeholder="Apellido Paterno" /><br />
+        <label for="appm">Apellido Materno:</label>
         <input type="text" name="apellido_mat" placeholder="Apellido Materno" /><br />
+        <label for="puesto">Puesto:</label>
         <select name="puesto">
             <option>Status Profesional</option>
             <option value="Estudiante">Estudiante</option>
             <option value="Profesor">Profesor</option>
             <option value="Personal">Personal de la Biblioteca</option>
         </select>
+        <br />
+         <label for="pass">Contraseña:</label>
         <input type="password" name="password" placeholder="&#128272; Contraseña" />
         <input type="submit" value="Dar de Alta" />
+        <a href="Main_Panel.php">Regresar al Menú Principal</a>
     </form>
     </div>
 </body>

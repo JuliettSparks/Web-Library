@@ -10,7 +10,7 @@
                   $contrasena="";
                   $db="biblioteca";
                   
-                  $conexion=mysqli_connect($servidor,$usuario,$contrasena,$db);
+                  $conexion=mysqli_connect('127.0.0.1','externo','qwerty123','biblioteca',3307);
       
                   $query="SELECT * from prestamos WHERE id_Persona='$user' and dias_restantes =1";
   
@@ -28,10 +28,10 @@
     <title>Biblioteca</title>
 </head>
 <body>
-    <form action="Conductor.php" method="post">
+    <form action="SendRequest.php" method="post">
     <?php if($data['id']==""){?>
         <h2>No se tienen Registrados Préstamos para este Usuario</h2>
-        <input type="submit" name="panel1" value="Regresar">
+        <a href="Main_Panel.php">Regresar al Menú Principal</a>
                <?php     
                 }else{$answer=mysqli_query($conexion,$query); ?>
                     <h2>Se tienen los Siguientes Préstamos Registrados de este Usuario, Los cuáles son candidatos a una renovación</h2>
@@ -67,7 +67,7 @@
 
                  }
             ?>    </select>
-                <input type="submit" name="renovar1"value="Enviar Solicitud">
+                <input type="submit" name="renovar3"value="Enviar Solicitud">
                 <a href="Main_Panel.php">Regresar al Menú Principal</a>
                 <?php
                 }?>

@@ -81,6 +81,7 @@
 					</li>
 					<li class="nav-item"> <a class="nav-link" href="Prestamo.php">Solicitar un Préstamo</a> </li>
 					<li class="nav-item"> <a class="nav-link" href="Solicita_Renovar.php">Solicitar Renovación</a> </li>
+					<li class="nav-item"><a class="nav-link" href="Reposition_Loan.php">Reponer los Libros Perdidos</a></li>
 					<?php
 					}?>
 				  <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>

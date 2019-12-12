@@ -21,21 +21,24 @@
 
     $index=mysqli_fetch_assoc($value);
 
-    echo "Se tiene un Total de ".$index['total']." Libros";
+    //echo "Se tiene un Total de ".$index['total']." Libros";
 
     $iterator=1;
 
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-mx">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Styles/ConsultasGeneralStyles.css" />
     <title>Biblioteca</title>
 </head>
 <body>
+    <h1>Se tienen los Siguientes Libros:</h1>
+    <div class="Cajota">
     <form action="Main_Panel.php" method="post">
     <table border="1">
         <tr>
@@ -75,7 +78,9 @@
             ?>
                 
     </table>
-    <input type="submit" value="Regresar al Menu Principal">
+        <input type="submit" value="Regresar al Menú Principal">
             </form> 
+            </div>
+    
 </body>
 </html>

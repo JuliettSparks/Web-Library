@@ -1,0 +1,51 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background: url(../Styles/Images/ConsultasFondo.png) no-repeat center top;
+    font-family: Arial;
+    background-size: cover;
+    height: 100vh;
+}
+h1 {
+    color: aliceblue;
+    text-align: center;
+}
+.Cajota{
+    text-align:center;
+}
+.Cajota table{
+   font-family: 'Palatino Linotype';
+   background-color:aliceblue;
+   position: absolute;
+   top: 70%;
+   margin-top: -300px;
+   border-collapse:collapse;
+}
+.Cajota td{
+    border: 1px solid black;
+}
+.Cajota tr:nth-child(even){
+    background-color:forestgreen;
+}
+.Cajota tr:hover{
+    cursor: pointer;
+    background-color: darkred;
+    color: wheat;
+}
+.Cajota input {
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 50%;
+    height: 40px;
+    background-color: darkred;
+    color: aliceblue;
+    border-radius: 20px;
+    border: aliceblue 5px dotted;
+}
+.Cajota input[type="submit"]:hover {
+    cursor: pointer;
+    color: navy;
+    border: PowderBlue 5px dashed;
+    background-color: gold;
+}

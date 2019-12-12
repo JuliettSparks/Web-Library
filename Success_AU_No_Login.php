@@ -12,9 +12,12 @@
 <head>
     <meta charset="utf-8" />
     <title>Biblioteca</title>
+    <link rel="stylesheet" href="Styles/Success_AU_Styles.css" />
 </head>
 <body>
-        <h2>Éxito Al Agregar al Nuevo Alumno</h2>
+        <div class="Cajita" alt="Logo">
+        <h1>Éxito Al Agregar al Nuevo Alumno</h1>
         <a href="index.html">Regresar al Menú Principal</a>
+        </div>
 </body>
 </html>

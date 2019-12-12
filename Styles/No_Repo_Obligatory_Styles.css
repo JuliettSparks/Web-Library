@@ -1,0 +1,52 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background: url(../Styles/Images/SinDeudasFondo.png) no-repeat center top;
+    font-family: 'Century Schoolbook';
+    background-size: cover;
+    height: 100vh;
+}
+.Cajita{
+    width: 320px;
+    height: 150px;
+    color: crimson;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.Cajita .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+.Cajita h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.Cajita input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.Cajita input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: darkorchid;
+    color: yellow;
+    border-radius: 20px;
+}
+
+.Cajita input[type="submit"]:hover {
+        cursor: pointer;
+        color: darkcyan;
+        background-color: aquamarine;
+}
