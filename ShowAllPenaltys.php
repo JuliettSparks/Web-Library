@@ -31,12 +31,12 @@
     <div class="Cajota">
     <form action="Conductor.php" method="post">
     <?php if($data['id_Persona']==""){?>
-        <h2>No se tienen Multas de ningún usuario</h2>
+        <h1>No se tienen Multas de ningún usuario</h1>
         <input type="submit" name="panel1" value="Regresar al Menú Principal" />
                 <?php
             }else{
                 $answer=mysqli_query($conexion,$query); ?>
-                <h2>Se encontraron las Siguientes Deudas:</h2>
+                <h1>Se encontraron las Siguientes Deudas:</h1>
                 <table border="1">
                 <tr>
                     <td>ID del Préstamo:</td>
