@@ -14,8 +14,13 @@
             $usuario="root";
             $contrasena="";
             $db="biblioteca";
-    
+            $variable=0;
             $conexion=mysqli_connect($servidor,$usuario,$contrasena,$db);
+            $query="SELECT * from prestamos where id_Persona='$var_usuario' and status_libro='$variable'";
+            $answer=mysqli_query($conexion,$query);
+            if($data=mysqli_fetch_array($answer)){
+            header("location: LoanRefuse.html");
+    }
             //Si no se hizo la conexion
                 if(!$conexion){
                 echo "Error: No se puede conectar a la DB".PHP_EOL;

@@ -61,5 +61,7 @@
     if($_POST['renovar3']){
         header("location: SendRequest.php");
     }
-
+    if($_POST['repo1']){
+        header("location: Reposition_Loan.php");
+    }
 ?>
