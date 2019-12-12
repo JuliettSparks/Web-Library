@@ -10,7 +10,7 @@
                   $contrasena="";
                   $db="biblioteca";
                   
-                  $conexion=mysqli_connect('127.0.0.1','externo','qwerty123','biblioteca',3307);
+                 $conexion=mysqli_connect($servidor,$usuario,$contrasena,$db);
       
                   $query="SELECT * from prestamos WHERE id_Persona='$user' and dias_restantes =1";
   
