@@ -18,6 +18,7 @@
 h1{
     font-size:14px;
     text-align:center;
+    margin-top:auto;
 }
 .Cajota table{
    font-family: Pristina;
@@ -41,6 +42,7 @@ h1{
     color: wheat;
 }
 .Cajota input {
+    margin-top:auto;
     border:none;
     outline:none;
     width:50%;
