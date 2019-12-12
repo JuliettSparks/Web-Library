@@ -74,7 +74,7 @@
 
                  }
             ?>    
-    <input type="submit" value="Solicitar" />
+    <input type="submit" value="Reponer" />
     <a href="Main_Panel.php">Regresa al Menú Principal</a>
     </form>
 </body>

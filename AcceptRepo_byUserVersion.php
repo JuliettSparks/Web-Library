@@ -25,7 +25,7 @@
     $LeNewExistA=$data2['existencia_a']+1;
     $LeNewExistP=$data2['existencia_p']-1;
 
-    $query3="UPDATE libros SET existencia_a='$LeNewExistA', existencia_p='$LeNewExistP'";
+    $query3="UPDATE libros SET existencia_a='$LeNewExistA', existencia_p='$LeNewExistP' where id='$idBook'";
 
     $query4="DELETE from prestamos where id='$idLoan'";
 
