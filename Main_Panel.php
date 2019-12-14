@@ -66,11 +66,34 @@
 						<a class="dropdown-item" href="Add_Subject.html">Nueva Asignatura</a>
 			          </div>
 		          </li>
-					<li class="nav-item"> <a class="nav-link" href="ShowAllLoans.php">Mostrar Todos los Préstamos</a> </li>
-					<li class="nav-item"> <a class="nav-link" href="Donar.php">Donar Libros</a> </li>
-					<li class="nav-item"> <a class="nav-link" href="Reposition_By_Worker.php">Añadir/Reponer Ejemplares</a></li>
-					<li class="nav-item"> <a class="nav-link" href="ShowAllPenaltys.php">Revisar todos los Adeudos</a> </li>
-					<li class="nav-item"> <a class="nav-link" href=ShowAllRequests.php>Revisar Solicitudes de Renovación</a> </li>
+					<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Mostrar Datos </a>
+			        	<div class="dropdown-menu" aria-labelledby="navbarDropdown1"> 
+						<a class="dropdown-item" href="ShowAllLoans.php">Mostrar Todos los Préstamos</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="ShowAllPenaltys.php">Revisar todos los Adeudos</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="ShowAllRequests.php">Revisar Solicitudes de Renovación</a>
+			          </div>
+		          </li>
+					<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Operaciones con Libros </a>
+			        	<div class="dropdown-menu" aria-labelledby="navbarDropdown1"> 
+						<a class="dropdown-item" href="Donar.php">Donar Libros</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="Reposition_By_Worker.php">Añadir/Reponer Ejemplares</a>
+			          </div>
+		          </li>
+					<!--REPORTES-->
+					<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Reportes </a>
+			        	<div class="dropdown-menu" aria-labelledby="navbarDropdown1"> 
+						<a class="dropdown-item" href="ReportAllBooks.php">Libros</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="ReportAllLoans.php">Préstamos</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="ReportAllPenaltys.php">Adeudos</a>
+                        <div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="ReportAllUsers.php">Usuarios</a>
+			          </div>
+		          </li>
 					<?php
 					}else{?>
 					<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Mostrar Datos </a>
